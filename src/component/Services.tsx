@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { X } from 'lucide-react';
 import Card from './Card';
+import demont from '../assets/services/demont.jpg'
 
 const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,7 +15,7 @@ const Services = () => {
       description: 'Профессиональный демонтаж любых конструкций, квартир, мебели и техники.',
       price: 'от 1500 ₽/час',
       minHours: 4,
-      image: './src/assets/services/demont.jpg'
+      image: demont
     },
     {
       id: 2,
