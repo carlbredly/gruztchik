@@ -139,14 +139,6 @@ const Services = () => {
                     className='border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-200 bg-white'
                   >
                     <div className='flex flex-col sm:flex-row sm:items-start gap-4'>
-                      {/* Optionnel: Ajouter l'image dans le modal si nécessaire */}
-                      {service.image && (
-                        <img 
-                          src={service.image} 
-                          alt={service.name}
-                          className='w-full sm:w-48 h-32 object-cover rounded-lg mb-4 sm:mb-0'
-                        />
-                      )}
                       <div className='flex-1'>
                         <h3 className='text-lg sm:text-xl font-bold text-gray-900 mb-1'>
                           {service.name}
