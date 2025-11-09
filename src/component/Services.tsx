@@ -2,7 +2,12 @@ import { useState } from 'react'
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { X } from 'lucide-react';
 import Card from './Card';
+// Importer toutes les images statiquement
 import demont from '../assets/services/demont.jpg'
+import decoupe from '../assets/services/decoupe.jpeg'
+import frigo from '../assets/services/frigo.jpeg'
+import rabot from '../assets/services/rabot.jpg'
+import camion from '../assets/services/camion.jpeg'
 
 const Services = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,7 +29,7 @@ const Services = () => {
       description: 'Резка и оперативный вывоз металлолома с объекта, вывезем быстро и аккуратно.',
       price: 'от 2000 ₽/час',
       minHours: 4,
-      image: './src/assets/services/decoupe.jpeg'
+      image: decoupe
     },
     {
       id: 3,
@@ -33,7 +38,7 @@ const Services = () => {
       description: 'Профессиональный монтаж и подключение кондиционеров, холодильного оборудования.',
       price: 'от 2500 ₽/час',
       minHours: 3,
-      image: './src/assets/services/frigo.jpeg'
+      image: frigo
     },
     {
       id: 4,
@@ -42,7 +47,7 @@ const Services = () => {
       description: 'Любые работы: переноска, подсобные, помощь на стройке, мелкий ремонт.',
       price: 'от 1200 ₽/час',
       minHours: 4,
-      image: './src/assets/services/rabot.jpg'
+      image: rabot
     },
     {
       id: 5,
@@ -51,7 +56,7 @@ const Services = () => {
       description: 'Надёжная упаковка и аккуратная погрузка любых вещей и мебели.',
       price: 'от 1800 ₽/час',
       minHours: 4,
-      image: './src/assets/services/camion.jpeg'
+      image: camion
     },
     {
       id: 6,
@@ -60,7 +65,7 @@ const Services = () => {
       description: 'Комплексные переезды для квартир, офисов и предприятий.',
       price: 'от 2200 ₽/час',
       minHours: 4,
-      image: './src/assets/services/camion.jpeg'
+      image: camion
     },
     {
       id: 7,
@@ -69,7 +74,7 @@ const Services = () => {
       description: 'Генеральная уборка после ремонта, вынос и вывоз строительного и бытового мусора.',
       price: 'от 1000 ₽/час',
       minHours: 3,
-      image: './src/assets/services/rabot.jpg'
+      image: rabot
     }
   ];
 
@@ -92,11 +97,11 @@ const Services = () => {
               </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 xl:gap-14 my-4 sm:my-6 overflow-x-auto sm:overflow-x-visible">
-              <Card foto="./src/assets/services/demont.jpg" texte="Демонтаж и разборка" />
-              <Card foto="./src/assets/services/decoupe.jpeg" texte="Резка и вывоз металла" />
-              <Card foto="./src/assets/services/frigo.jpeg" texte="установка кондиционеров и холодильников" />
-              <Card foto="./src/assets/services/rabot.jpg" texte="Услуги разнорабочего и ремонтные услуги" />
-              <Card foto="./src/assets/services/camion.jpeg" texte="Услуги по упаковке и погрузке" />
+              <Card foto={demont} texte="Демонтаж и разборка" />
+              <Card foto={decoupe} texte="Резка и вывоз металла" />
+              <Card foto={frigo} texte="установка кондиционеров и холодильников" />
+              <Card foto={rabot} texte="Услуги разнорабочего и ремонтные услуги" />
+              <Card foto={camion} texte="Услуги по упаковке и погрузке" />
           </div>
           <div className='flex justify-center'>
               <div className="relative w-full sm:w-3/4 md:w-1/2 h-[2px] bg-gray-300 my-4">
@@ -134,6 +139,14 @@ const Services = () => {
                     className='border border-gray-200 rounded-xl p-4 sm:p-5 hover:shadow-lg transition-all duration-200 bg-white'
                   >
                     <div className='flex flex-col sm:flex-row sm:items-start gap-4'>
+                      {/* Optionnel: Ajouter l'image dans le modal si nécessaire */}
+                      {service.image && (
+                        <img 
+                          src={service.image} 
+                          alt={service.name}
+                          className='w-full sm:w-48 h-32 object-cover rounded-lg mb-4 sm:mb-0'
+                        />
+                      )}
                       <div className='flex-1'>
                         <h3 className='text-lg sm:text-xl font-bold text-gray-900 mb-1'>
                           {service.name}
