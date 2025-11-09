@@ -20,11 +20,14 @@ export default function CompanyMap() {
     <div className="w-full space-y-2 h-inherit sm:h-auto lg:h-auto">
       <MapContainer
         center={position}
-        zoom={90}
+        zoom={13}
         scrollWheelZoom={false}
         className="w-full h-full rounded-3xl border border-gray-300 shadow-xl"
       >
-        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayer 
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
+        />
         
         <Marker position={position} icon={redMarker}>
           <Popup>

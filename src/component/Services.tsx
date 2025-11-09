@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { DynamicIcon } from 'lucide-react/dynamic';
 import { X } from 'lucide-react';
 import Card from './Card';

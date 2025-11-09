@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Trust = () => {
   return (
     <div className='grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 my-6 sm:my-8 mx-0 sm:mx-4 md:mx-14'>

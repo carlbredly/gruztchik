@@ -1,4 +1,3 @@
-import React from 'react'
 import FastOrderForm from './FastOrderForm'
 import CompanyMap from './CompanyMap'
 

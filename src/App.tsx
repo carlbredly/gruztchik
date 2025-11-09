@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import type { Variants } from 'framer-motion'
-import { useEffect } from 'react';
 
 import Contact from './component/Contact'
 import Header from './component/Header'

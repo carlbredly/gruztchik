@@ -1,6 +1,9 @@
-import React from 'react'
+interface CardProps {
+  foto: string;
+  texte: string;
+}
 
-const Card = ({foto, texte}) => {
+const Card = ({foto, texte}: CardProps) => {
   return (
     <div className='relative h-64 sm:h-72 md:h-80 w-full sm:w-52 overflow-hidden bg-amber-400 rounded-2xl mx-auto'>
         <img src={foto} alt={texte} className='w-full h-full object-cover'/>
